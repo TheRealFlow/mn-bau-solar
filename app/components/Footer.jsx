@@ -91,7 +91,12 @@ const Footer = () => {
         <div className="w-full md:w-1/3">
           <ul className="flex space-x-6 md:justify-end justify-center">
             <li>
-              <Link className="font-bold hover:text-orange-600" href="/agb">
+              <Link
+                className="font-bold hover:text-orange-600"
+                href="/agb.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 AGB
               </Link>
             </li>
