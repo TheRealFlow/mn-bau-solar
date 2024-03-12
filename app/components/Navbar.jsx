@@ -1,16 +1,26 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { HiMenu } from "react-icons/hi";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header>
-      <nav className="fixed top-0 w-full bg-transparent p-4 backdrop-blur-md border-b-2">
+      <nav className="fixed top-0 w-full bg-transparent p-4 backdrop-blur-md border-b-2 z-50">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <div>
             <Link href="/">
               <Image
-                src="/logo_long_icon.webp"
+                src="/logo_long.webp"
                 alt="MN-Bau & Solar"
                 width={200}
                 height={50}
@@ -20,9 +30,9 @@ const Navbar = () => {
           </div>
 
           {/* Links */}
-          <div className="hidden lg:flex font-bold">
+          <div className="hidden lg:flex font-bold text-lg">
             <ul className="flex space-x-10 ">
-              <NavItem href="/about">About</NavItem>
+              <NavItem href="/about">Über uns</NavItem>
               <NavItem href="/angebote">Angebote</NavItem>
               <NavItem href="/finanzierung">Finanzierung</NavItem>
               <NavItem href="/projekte">Projekte</NavItem>
@@ -33,32 +43,46 @@ const Navbar = () => {
 
           {/* "Angebot einholen" Button */}
           <div>
-            <Link
-              className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md"
-              href="/angebot"
-            >
+            <button className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold mx-4 py-2 px-2 rounded-md inline-block md:mt-0">
               Angebot einholen
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Menu */}
           <div className="lg:hidden">
             {/* Hamburger Menu Icon */}
-            {/* Replace with your preferred icon */}
-            <svg
-              className="h-6 w-6  cursor-pointer"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
+            <HiMenu
+              onClick={toggleNavbar}
+              className="hover:cursor-pointer text-2xl text-orange-500"
+            />
+          </div>
+
+          {/* Links */}
+          <div
+            className={` text-lg ${
+              isOpen ? "flex" : "hidden"
+            } absolute top-full right-0 w-1/5 bg-white lg:bg-transparent `}
+          >
+            <ul className="lg:hidden flex flex-col m-5 gap-2">
+              <NavItem href="/about" onClick={toggleNavbar}>
+                Über uns
+              </NavItem>
+              <NavItem href="/angebote" onClick={toggleNavbar}>
+                Angebote
+              </NavItem>
+              <NavItem href="/finanzierung" onClick={toggleNavbar}>
+                Finanzierung
+              </NavItem>
+              <NavItem href="/projekte" onClick={toggleNavbar}>
+                Projekte
+              </NavItem>
+              <NavItem href="/service" onClick={toggleNavbar}>
+                Service
+              </NavItem>
+              <NavItem href="/kontakt" onClick={toggleNavbar}>
+                Kontakt
+              </NavItem>
+            </ul>
           </div>
         </div>
       </nav>

@@ -1,55 +1,120 @@
 import Link from "next/link";
-import { SocialIcon } from "react-social-icons";
-import "react-social-icons/facebook";
-import "react-social-icons/instagram";
-import "react-social-icons/linkedin";
+import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
+import {
+  FaFacebook,
+  FaGoogle,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-4 text-sm flex">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        {/* Unternehmensinformationen linksbündig */}
-        <div className="text-center md:text-left mb-4 md:mb-0">
-          <p>MN-Bau & Solar GbR</p>
-          <p>Hinner de Hääch 1</p>
-          <p>18059 Rostock OT Papendorf</p>
-          <p>info@mnbausolar.de</p>
-          <p>+4938140343777</p>
+    <footer className="static bottom-0 w-full bg-gray-800 text-white py-5 text-sm">
+      <div className="container mx-auto flex flex-wrap items-center justify-between space-y-4">
+        {/* Linksbündig */}
+        <div className="w-full md:w-1/3 text-center md:text-left">
+          <p className="font-bold text-lg">MN-Bau & Solar GbR</p>
+          <Link
+            href="https://www.google.com/maps?q=Hinner%20de%20H%C3%A4%C3%A4ch%201,%2018059%20Rostock%20OT%20Papendorf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-orange-600"
+          >
+            Hinner de Hääch 1, 18059 Rostock OT Papendorf
+          </Link>
+          <Link
+            href="mailto:info@mnbausolar.de"
+            className="flex items-center justify-center md:justify-start hover:text-orange-600"
+          >
+            <HiOutlineMail />
+            <span className="ml-2">info@mnbausolar.de</span>
+          </Link>
+          <Link
+            href="tel:+4938140343777"
+            className="flex items-center justify-center md:justify-start hover:text-orange-600"
+          >
+            <HiOutlinePhone />
+            <span className="ml-1">+49 (0) 381 40343777</span>
+          </Link>
         </div>
-
-        {/* Social Media Icons und Copyright zentriert */}
-        <div className="flex flex-col justify-center space-x-4 md:justify-end md:space-x-0 md:space-y-2">
-          <div className="flex space-x-4">
-            <SocialIcon url="https://www.facebook.com/dein-facebook" />
-            <SocialIcon url="https://www.instagram.com/dein-instagram" />
-            <SocialIcon url="https://www.linkedin.com/dein-linkedin" />
+        {/* Mittig */}
+        <div className="w-full md:w-1/3 text-center">
+          <div className="flex justify-center space-x-4">
+            <Link
+              href="https://www.facebook.com/people/MN-Bau-Solar-GbR/100082861136495/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-orange-600 text-2xl"
+            >
+              <FaFacebook />
+            </Link>
+            <Link
+              href="https://www.instagram.com/mnbausolar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-orange-600 text-2xl"
+            >
+              <FaInstagram />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/jens-meiwald-768a79249/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-orange-600 text-2xl"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
+              href="https://web.whatsapp.com/send?phone=4915146395042"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-orange-600 text-2xl"
+            >
+              <FaWhatsapp />
+            </Link>
+            <Link
+              href="https://www.google.de/search?sca_esv=3c569254cd59810a&sxsrf=ACQVn0-wUXyrPaVGNCXvYuxQJc2_qUsIhA:1710205613004&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu6ob01DzknnhsvKfzUl3NCFACw5rCcw0OijEm9dTM_Q-3kxHsn4sYtDImh1ORihlj1IdlMhfMFrGeKzpgPLYoF_6ZAXsvCwRsJs_uqSPTPwGrMnpu&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SfPWRARqf7nZwpVBitvihJ7cJGoPC_OpegrlmuYmhWaD30smhQ%3D&q=MNBau+%26+Solar+GbR+Rezensionen&sa=X&ved=2ahUKEwi49LiwxO2EAxWlnf0HHd_TD90Q3PALegQIXBAF&cshid=1710205744166576&biw=1920&bih=968"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-orange-600 text-2xl"
+            >
+              <FaGoogle />
+            </Link>
           </div>
-          <p>
-            &copy; {new Date().getFullYear()} MN-Bau & Solar. Alle Rechte
+          <p className="mt-4">
+            © {new Date().getFullYear()} MN-Bau & Solar GbR. Alle Rechte
             vorbehalten.
           </p>
         </div>
-      </div>
-
-      {/* Untere Links rechtsbündig */}
-      <div className="container mx-auto flex justify-end mt-4">
-        <ul className="flex space-x-4">
-          <FooterLink href="/agb">AGB's</FooterLink>
-          <FooterLink href="/impressum">Impressum</FooterLink>
-          <FooterLink href="/datenschutz">Datenschutz</FooterLink>
-        </ul>
+        {/* Rechtsbündig */}
+        <div className="w-full md:w-1/3">
+          <ul className="flex space-x-6 md:justify-end justify-center">
+            <li>
+              <Link className="font-bold hover:text-orange-600" href="/agb">
+                AGB
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-bold hover:text-orange-600"
+                href="/impressum"
+              >
+                Impressum
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-bold hover:text-orange-600"
+                href="/datenschutz"
+              >
+                Datenschutz
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
-  );
-};
-
-const FooterLink = ({ href, children }) => {
-  return (
-    <li>
-      <Link className="hover:text-gray-300" href={href}>
-        {children}
-      </Link>
-    </li>
   );
 };
 
