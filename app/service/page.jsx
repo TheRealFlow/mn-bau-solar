@@ -67,19 +67,26 @@ function Service() {
           </h2>
           <div className="bg-gray-100 text-gray-700 rounded-lg p-4 mb-10">
             <p className=" mb-4">
-              Gerne berechnen wir Ihren tatsächlichen Bedarf anhand der von
-              Ihnen übermittelten Daten.
+              Wir setzen auf hochwertige Materialien und modernste Technologien,
+              um Ihnen eine optimale Leistung und langfristige Zufriedenheit zu
+              garantieren. Unsere erfahrenen Monteure installieren die Anlage
+              fachgerecht und sorgen für eine reibungslose Inbetriebnahme.
             </p>
             <p className=" mb-4">
-              Beantworten Sie dazu auf den folgenden Seiten einige Fragen.
-              Anschließend haben Sie die Möglichkeit, Ihre ganz persönliche
-              Auswertung zu erhalten. Diese wird Ihnen von uns per E-Mail
-              zugesandt.
+              Mit unseren Photovoltaikanlagen können Sie nicht nur Ihre
+              Energiekosten senken, sondern auch einen wichtigen Beitrag zum
+              Klimaschutz leisten. Photovoltaikanlagen sind eine
+              umweltfreundliche Alternative zu herkömmlichen Stromquellen und
+              tragen dazu bei, den CO2-Austoß zu reduzieren und unsere Umwelt zu
+              schonen.
             </p>
             <p>
-              Auf Wunsch belegen wir mit Hilfe unserer Software Ihr Dach und
-              berechnen bei Bedarf einen Speicher mit ein. Dazu laden Sie
-              einfach ein Bild Ihrer Dachfläche hoch.
+              <a href="/kontakt" className="text-orange-500 hover:underline">
+                Kontaktieren
+              </a>{" "}
+              Sie uns noch heute und lassen Sie uns gemeinsam Ihre
+              Energieversorgung auf eine nachhaltige und umweltfreundliche Art
+              und Weise verbessern.
             </p>
           </div>
           <button
@@ -119,24 +126,56 @@ function Service() {
       </div>
 
       {/* Schlusstext */}
-      <div className="max-w-4xl text-center mx-auto py-6 px-4">
-        <div className="bg-gray-100 text-gray-700 rounded-lg p-4">
+      <div className="max-w-4xl mx-auto py-6 px-4 text-center">
+        <h2 className="text-xl font-semibold mb-4">
+          Entdecken Sie das Mieterstrom-Modell
+        </h2>
+        <div className="bg-gray-100 text-gray-700 rounded-lg p-4 mb-10">
           <p className="mb-4">
-            Bitte beachten Sie, dass der endgültige Preis des Angebots von
-            verschiedenen Faktoren abhängt, einschließlich der Größe der
-            Solaranlage, der gewählten Komponenten und des Umfangs der
-            Installation. Ausgenommen hiervon sind unsere Komplettpreisangebote.
+            Möchten Sie Ihre Energiekosten senken, Ihren ökologischen Fußabdruck
+            verkleinern und gleichzeitig Ihren Mietern ein attraktives Angebot
+            machen? Dann ist unser Mieterstrommodell die perfekte Lösung für
+            Sie!
           </p>
           <p className="mb-4">
+            Mit der uns haben Sie die Möglichkeit, Ihren eigenen Strom zu
+            erzeugen und direkt an Ihre Mieter weiterzugeben. Dank modernster
+            Solartechnologie und unserer umfangreichen Expertise in der
+            Energiebranche können wir Ihnen ein maßgeschneidertes Konzept
+            bieten, das sowohl ökonomisch als auch ökologisch überzeugt. Die
+            Vorteile unseres Mieterstrommodells sind vielfältig. Zum einen
+            können Sie als Vermieter die Energiekosten nachhaltig reduzieren und
+            somit Ihre Rentabilität steigern. Gleichzeitig bieten Sie Ihren
+            Mietern attraktive Tarife für sauberen und bezahlbaren Strom,
+            wodurch sie von niedrigeren Energiekosten profitieren. Dies stärkt
+            die Mieterbindung und steigert die Attraktivität Ihrer Immobilie.
+          </p>
+          <p className="mb-4">
+            Unser eingespieltes Team von der MNBau & Solar unterstützt Sie in
+            jeder Phase des Projekts. Von der Planung und Installation der
+            Solaranlage bis hin zur Vertragsabwicklung und Abrechnung stehen wir
+            Ihnen mit unserer Fachkompetenz zur Seite. Wir sorgen dafür, dass
+            das Mieterstrommodell reibungslos funktioniert und Sie sich um
+            nichts kümmern müssen. Zusätzlich zu den finanziellen und
+            ökologischen Vorteilen bietet unser Mieterstrommodell eine
+            nachhaltige Imagesteigerung für Ihr Unternehmen. Sie zeigen Ihren
+            Mietern und der Öffentlichkeit, dass Sie Verantwortung für die
+            Umwelt übernehmen und aktiv zum Klimaschutz beitragen.
+          </p>
+          <p className="mb-4">
+            Verpassen Sie nicht die Chance, mit uns, dass innovative
+            Mieterstrommodell zu nutzen. Lassen Sie uns gemeinsam eine
+            nachhaltige Zukunft gestalten und profitieren Sie von den
+            zahlreichen Vorzügen dieses wegweisenden Konzepts.
+          </p>
+          <p>
             <a href="/kontakt" className="text-orange-500 hover:underline">
               Kontaktieren
             </a>{" "}
-            Sie uns noch heute, um Ihr individuelles Angebot für die Solaranlage
-            zu erhalten.
-          </p>
-          <p>
-            Wir freuen uns darauf, Ihnen bei Ihrem umweltfreundlichen
-            Energieprojekt zu helfen.
+            Sie uns noch heute und lassen Sie sich persönlich von unseren
+            Experten beraten. Gemeinsam finden wir die ideale Lösung für Ihr
+            Immobilienprojekt und setzen Ihre Vision vom Mieterstrom erfolgreich
+            um.
           </p>
         </div>
       </div>

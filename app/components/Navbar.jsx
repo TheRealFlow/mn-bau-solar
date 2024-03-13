@@ -39,10 +39,10 @@ const Navbar = () => {
           <div className="hidden lg:flex font-semibold text-lg">
             <ul className="flex lg:space-x-8 md:space-x-4">
               <NavItem href="/about">Über uns</NavItem>
+              <NavItem href="/service">Service</NavItem>
+              <NavItem href="/projekte">Projekte</NavItem>
               <NavItem href="/angebote">Angebote</NavItem>
               <NavItem href="/finanzierung">Finanzierung</NavItem>
-              <NavItem href="/projekte">Projekte</NavItem>
-              <NavItem href="/service">Service</NavItem>
               <NavItem href="/kontakt">Kontakt</NavItem>
             </ul>
           </div>
@@ -76,17 +76,17 @@ const Navbar = () => {
               <NavItem href="/about" onClick={closeNavbar}>
                 Über uns
               </NavItem>
+              <NavItem href="/service" onClick={closeNavbar}>
+                Service
+              </NavItem>
+              <NavItem href="/projekte" onClick={closeNavbar}>
+                Projekte
+              </NavItem>
               <NavItem href="/angebote" onClick={closeNavbar}>
                 Angebote
               </NavItem>
               <NavItem href="/finanzierung" onClick={closeNavbar}>
                 Finanzierung
-              </NavItem>
-              <NavItem href="/projekte" onClick={closeNavbar}>
-                Projekte
-              </NavItem>
-              <NavItem href="/service" onClick={closeNavbar}>
-                Service
               </NavItem>
               <NavItem href="/kontakt" onClick={closeNavbar}>
                 Kontakt

@@ -52,6 +52,21 @@ function Angebote() {
             </p>
           </div>
         </div>
+
+        {/* <div className="max-w-4xl mx-auto px-4">
+          <p>
+            ---------------------------------------------------------------------
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto py-6 px-4">
+          <h2 className="text-2xl font-semibold mb-2">
+            Neu und ab sofort, bekommen alle unsere Kunden eine schwarz
+            eloxierte Unterkonstruktion. Diese besteht aus schwarz-eloxierten
+            Schienen, sowie schwarzen Mittel -und Endklemmen und schwarzen
+            Endkappen.
+          </h2>
+        </div> */}
       </div>
     </>
   );
