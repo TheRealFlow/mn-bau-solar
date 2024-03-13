@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { HiMenu } from "react-icons/hi";
@@ -20,7 +20,7 @@ const Navbar = () => {
           <div>
             <Link href="/">
               <Image
-                src="/logo_long.webp"
+                src="/logo_long_icon.webp"
                 alt="MN-Bau & Solar"
                 width={200}
                 height={50}
@@ -30,8 +30,8 @@ const Navbar = () => {
           </div>
 
           {/* Links */}
-          <div className="hidden lg:flex font-bold text-lg">
-            <ul className="flex space-x-10 ">
+          <div className="hidden lg:flex font-semibold text-lg">
+            <ul className="flex space-x-8">
               <NavItem href="/about">Über uns</NavItem>
               <NavItem href="/angebote">Angebote</NavItem>
               <NavItem href="/finanzierung">Finanzierung</NavItem>

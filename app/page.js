@@ -1,21 +1,30 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Home = () => {
   return (
     <>
       {/* Hero Bereich */}
       <section className="relative bg-gray-100 min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="container mx-auto text-center z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-900">
-            Willkommen bei MN-Bau & Solar
+        <div className="container mx-auto text-center flex flex-col justify-center items-center gap-4 z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-700">
+            Willkommen bei
           </h1>
-          <p className="text-lg md:text-xl mb-8 text-gray-900">
+          <Image
+            src="/logo_squere.webp"
+            alt="MN-Bau & Solar Logo"
+            width={300}
+            height={300}
+            objectFit="cover"
+            quality={100}
+          />
+          <p className="text-lg md:text-2xl my-8 text-gray-700">
             Ihr Partner für nachhaltiges Bauen mit Solarenergie
           </p>
         </div>
         <div className="absolute inset-0 z-0">
           <img
-            src="/luftaufnahme_lang.webp"
+            src="/mn-solar.jpeg"
             alt="Solar Panel"
             className="object-cover object-center w-full h-full opacity-40"
           />
@@ -43,9 +52,7 @@ const Home = () => {
       {/* Leistungen */}
       <section className="bg-gray-200 py-20">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Unsere Leistungen
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Unser Service</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="p-4 bg-white rounded-md shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Kontaktaufnahme</h3>
@@ -85,7 +92,7 @@ const Home = () => {
             </div>
             <Link
               className="text-orange-500 text-lg hover:underline text-center col-span-full"
-              href="/about"
+              href="/service"
             >
               Mehr erfahren
             </Link>
