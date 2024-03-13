@@ -1,7 +1,11 @@
 "use client";
+
 import { FaFilePdf } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 function Finanzierung() {
+  const navigate = useRouter();
+
   const offers = [
     {
       title: "Allgemeine Bedingungen und Möglichkeiten",
@@ -92,7 +96,12 @@ function Finanzierung() {
         </div>
 
         <div className="max-w-3xl mx-auto my-4 px-8 pb-8">
-          <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          <button
+            onClick={() => {
+              navigate.push("/kontakt");
+            }}
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          >
             Kontaktieren Sie uns jetzt für Ihr unverbindliches
             Finanzierungsangebot
           </button>

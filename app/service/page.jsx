@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa";
 
 function Service() {
+  const navigate = useRouter();
   const [selectedOffer, setSelectedOffer] = useState(null);
 
   const offers = [
@@ -80,7 +82,10 @@ function Service() {
               einfach ein Bild Ihrer Dachfläche hoch.
             </p>
           </div>
-          <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          <button
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => navigate.push("formular")}
+          >
             Holen Sie sich jetzt Ihr unverbindliches, kostenfreies Angebot
           </button>
         </div>

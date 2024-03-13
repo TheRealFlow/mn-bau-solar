@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { HiMenu } from "react-icons/hi";
 
 const Navbar = () => {
+  const navigate = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -47,7 +49,11 @@ const Navbar = () => {
 
           {/* "Angebot einholen" Button */}
           <div>
-            <button className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold mx-4 py-2 px-2 rounded-md inline-block md:mt-0">
+            <button
+              href="/formular"
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold mx-4 py-2 px-2 rounded-md inline-block md:mt-0"
+              onClick={() => navigate.push("formular")}
+            >
               Angebot einholen
             </button>
           </div>
