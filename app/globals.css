@@ -13,9 +13,9 @@
 }
 
 body {
+  height: 100dvh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  height: 100dvh;
 }
 
 img,

@@ -7,9 +7,6 @@ const Home = () => {
       {/* Hero Bereich */}
       <section className="relative bg-gray-100 min-h-screen flex items-center justify-center overflow-hidden">
         <div className="container mx-auto text-center flex flex-col justify-center items-center gap-4 z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-700">
-            Willkommen bei
-          </h1>
           <Image
             src="/logo_squere.webp"
             alt="MN-Bau & Solar Logo"
@@ -18,7 +15,7 @@ const Home = () => {
             objectFit="cover"
             quality={100}
           />
-          <p className="text-lg md:text-2xl my-8 text-gray-700">
+          <p className="text-lg font-semibold md:text-2xl my-8 text-gray-700">
             Ihr Partner für nachhaltiges Bauen mit Solarenergie
           </p>
         </div>
@@ -35,7 +32,7 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Über uns</h2>
-          <p className="text-lg md:text-xl mb-8">
+          <p className="text-lg md:text-xl px-2 mb-8">
             MN-Bau & Solar ist ein innovatives Unternehmen, das sich auf die
             Integration von Solarenergie in Bauvorhaben spezialisiert hat. Wir
             bieten maßgeschneiderte Lösungen für Privat- und Geschäftskunden an.
@@ -53,7 +50,7 @@ const Home = () => {
       <section className="bg-gray-200 py-20">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Unser Service</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 mx-4 gap-8">
             <div className="p-4 bg-white rounded-md shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Kontaktaufnahme</h3>
               <p className="text-lg mb-4">

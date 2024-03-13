@@ -6,8 +6,8 @@ function Projekte() {
   return (
     <>
       <div className="container mx-auto text-center mt-20">
-        <div className="max-w-4xl mx-auto py-4 px-4">
-          <h2 className="text-lg font-semibold mb-2">
+        <div className="max-w-4xl mx-auto py-6 px-4">
+          <h2 className="text-xl font-semibold mb-4">
             Unsere Photovoltaik und Solaranlagen
           </h2>
 
@@ -30,7 +30,7 @@ function Projekte() {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto py-6 px-4">
+        <div className="max-w-4xl mx-auto py-8 px-4">
           <h3 className="text-lg font-semibold">
             Hier stellen wir Ihnen ein Teil unserer bereit gebauten PV-Anlagen
             vor.

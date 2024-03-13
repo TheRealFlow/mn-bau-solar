@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="static bottom-0 w-full bg-gray-800 text-white py-5 text-sm">
+    <footer className="md:relative lg:abolute bottom-0 left-0 right-0 bg-gray-800 text-white py-5 text-sm md:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between space-y-4">
         {/* Linksbündig */}
         <div className="w-full md:w-1/3 text-center md:text-left">

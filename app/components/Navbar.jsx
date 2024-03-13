@@ -12,6 +12,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header>
       <nav className="fixed top-0 w-full bg-transparent p-4 backdrop-blur-md border-b-2 z-50">
@@ -31,7 +35,7 @@ const Navbar = () => {
 
           {/* Links */}
           <div className="hidden lg:flex font-semibold text-lg">
-            <ul className="flex space-x-8">
+            <ul className="flex lg:space-x-8 md:space-x-4">
               <NavItem href="/about">Über uns</NavItem>
               <NavItem href="/angebote">Angebote</NavItem>
               <NavItem href="/finanzierung">Finanzierung</NavItem>
@@ -53,33 +57,32 @@ const Navbar = () => {
             {/* Hamburger Menu Icon */}
             <HiMenu
               onClick={toggleNavbar}
-              className="hover:cursor-pointer text-2xl text-orange-500"
+              className="hover:cursor-pointer text-4xl text-orange-500"
             />
           </div>
-
           {/* Links */}
           <div
             className={` text-lg ${
               isOpen ? "flex" : "hidden"
-            } absolute top-full right-0 w-1/5 bg-white lg:bg-transparent `}
+            } absolute top-full right-0 w-1/2 md:w-1/4  bg-white lg:bg-transparent `}
           >
             <ul className="lg:hidden flex flex-col m-5 gap-2">
-              <NavItem href="/about" onClick={toggleNavbar}>
+              <NavItem href="/about" onClick={closeNavbar}>
                 Über uns
               </NavItem>
-              <NavItem href="/angebote" onClick={toggleNavbar}>
+              <NavItem href="/angebote" onClick={closeNavbar}>
                 Angebote
               </NavItem>
-              <NavItem href="/finanzierung" onClick={toggleNavbar}>
+              <NavItem href="/finanzierung" onClick={closeNavbar}>
                 Finanzierung
               </NavItem>
-              <NavItem href="/projekte" onClick={toggleNavbar}>
+              <NavItem href="/projekte" onClick={closeNavbar}>
                 Projekte
               </NavItem>
-              <NavItem href="/service" onClick={toggleNavbar}>
+              <NavItem href="/service" onClick={closeNavbar}>
                 Service
               </NavItem>
-              <NavItem href="/kontakt" onClick={toggleNavbar}>
+              <NavItem href="/kontakt" onClick={closeNavbar}>
                 Kontakt
               </NavItem>
             </ul>
@@ -91,10 +94,14 @@ const Navbar = () => {
 };
 
 // Component for individual nav items
-const NavItem = ({ href, children }) => {
+const NavItem = ({ href, children, onClick }) => {
   return (
     <li>
-      <Link className="text-black hover:text-orange-600" href={href}>
+      <Link
+        className="text-black hover:text-orange-600"
+        href={href}
+        onClick={onClick}
+      >
         {children}
       </Link>
     </li>
