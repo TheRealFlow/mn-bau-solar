@@ -100,6 +100,7 @@ function Finanzierung() {
 
         <div className="max-w-3xl mx-auto my-4 px-8 pb-8">
           <Link
+            component="button"
             className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
             href="/Kundenexemplar_Flyer_Solarkredit_Stand_05_01_2024_Sonderkonditionen.pdf"
             target="_blank"
