@@ -46,65 +46,67 @@ function Kontakt() {
         onSubmit={handleSubmit}
         className="max-w-4xl mx-auto bg-gray-100 rounded-lg py-6 px-4 mb-10"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label htmlFor="name" className="block mb-1 font-semibold">
-              Name *
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Vor- und Nachname"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block mb-1 font-semibold">
-              E-Mail *
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="max@mustermann.de"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="phone" className="block mb-1 font-semibold">
-              Telefonnummer
-            </label>
-            <input
-              type="text"
-              id="phone"
-              name="phone"
-              placeholder="0123 4567890"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
+        <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="name" className="block mb-1 font-semibold">
+                Name *
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Vor- und Nachname"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block mb-1 font-semibold">
+                E-Mail *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="max@mustermann.de"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="phone" className="block mb-1 font-semibold">
+                Telefonnummer
+              </label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="0123 4567890"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              />
+            </div>
 
-          <div>
-            <label htmlFor="address" className="block mb-1 font-semibold">
-              Adresse
-            </label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder="Straße, Hausnummer, PLZ, Ort"
-              value={formData.address}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-            />
+            <div>
+              <label htmlFor="address" className="block mb-1 font-semibold">
+                Adresse
+              </label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Straße, Hausnummer, PLZ, Ort"
+                value={formData.address}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              />
+            </div>
           </div>
           <div className="col-span-2">
             <label htmlFor="subject" className="block mb-1 font-semibold">

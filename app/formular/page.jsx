@@ -103,155 +103,162 @@ function Kontakt() {
         onSubmit={handleSubmit}
         className="max-w-4xl mx-auto bg-gray-100 rounded-lg py-6 px-4"
       >
-        <div className="grid  md:grid-cols-2 gap-5">
-          <div>
-            <label htmlFor="name" className="block mb-1 font-semibold">
-              Name *
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Vor- und Nachname"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-              required
-            />
-          </div>
+        <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="name" className="block mb-1 font-semibold">
+                Name *
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Vor- und Nachname"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                required
+              />
+            </div>
 
-          <div>
-            <label htmlFor="email" className="block mb-1 font-semibold">
-              E-Mail *
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="max@mustermann.de"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-              required
-            />
-          </div>
+            <div>
+              <label htmlFor="email" className="block mb-1 font-semibold">
+                E-Mail *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="max@mustermann.de"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                required
+              />
+            </div>
 
-          <div>
-            <label htmlFor="phone" className="block mb-1 font-semibold">
-              Telefonnummer
-            </label>
-            <input
-              type="text"
-              id="phone"
-              name="phone"
-              placeholder="0123 4567890"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
+            <div>
+              <label htmlFor="phone" className="block mb-1 font-semibold">
+                Telefonnummer
+              </label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="0123 4567890"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              />
+            </div>
 
-          <div>
-            <label htmlFor="address" className="block mb-1 font-semibold">
-              Adresse
-            </label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder="Straße, Hausnummer, PLZ, Ort"
-              value={formData.address}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
+            <div>
+              <label htmlFor="address" className="block mb-1 font-semibold">
+                Adresse
+              </label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Straße, Hausnummer, PLZ, Ort"
+                value={formData.address}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              />
+            </div>
 
-          <div>
-            <label htmlFor="roofType" className="block mb-1 font-semibold">
-              Dachtyp
-            </label>
-            <select
-              id="roofType"
-              name="roofType"
-              value={formData.roofType}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-            >
-              <option value="">Bitte auswählen</option>
-              <option value="Satteldach">Satteldach</option>
-              <option value="Flachdach">Flachdach</option>
-              <option value="Pultdach">Pultdach</option>
-              <option value="Tannendach">Zeltdach</option>
-              <option value="Krüppelwalmdach">Mansarddach</option>
-              <option value="Walmdach">Walmdach</option>
-              <option value="Bogendach">Schmetterlingsdach</option>
-              <option value="Nurdach">Faltwerkdach</option>
-              <option value="Sonstiges">Sonstiges</option>
-            </select>
-          </div>
+            <div>
+              <label htmlFor="roofType" className="block mb-1 font-semibold">
+                Dachtyp
+              </label>
+              <select
+                id="roofType"
+                name="roofType"
+                value={formData.roofType}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              >
+                <option value="">Bitte auswählen</option>
+                <option value="Satteldach">Satteldach</option>
+                <option value="Flachdach">Flachdach</option>
+                <option value="Pultdach">Pultdach</option>
+                <option value="Tannendach">Zeltdach</option>
+                <option value="Krüppelwalmdach">Mansarddach</option>
+                <option value="Walmdach">Walmdach</option>
+                <option value="Bogendach">Schmetterlingsdach</option>
+                <option value="Nurdach">Faltwerkdach</option>
+                <option value="Sonstiges">Sonstiges</option>
+              </select>
+            </div>
 
-          <div>
-            <label htmlFor="owner" className="block mb-1 font-semibold">
-              Eigentümer
-            </label>
-            <select
-              id="owner"
-              name="owner"
-              value={formData.owner}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-            >
-              <option value="">Bitte auswählen</option>
-              <option value="Eigentümer">Eigentümer</option>
-              <option value="Mieter">Mieter</option>
-            </select>
-          </div>
+            <div>
+              <label htmlFor="owner" className="block mb-1 font-semibold">
+                Eigentümer
+              </label>
+              <select
+                id="owner"
+                name="owner"
+                value={formData.owner}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              >
+                <option value="">Bitte auswählen</option>
+                <option value="Eigentümer">Eigentümer</option>
+                <option value="Mieter">Mieter</option>
+              </select>
+            </div>
 
-          <div>
-            <label htmlFor="currentKWh" className="block mb-1 font-semibold">
-              Aktueller Stromverbrauch (kWh)
-            </label>
-            <input
-              type="text"
-              id="currentKWh"
-              name="currentKWh"
-              placeholder="z.B. 3500"
-              value={formData.currentKWh}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
+            <div>
+              <label htmlFor="currentKWh" className="block mb-1 font-semibold">
+                Aktueller Stromverbrauch (kWh)
+              </label>
+              <input
+                type="text"
+                id="currentKWh"
+                name="currentKWh"
+                placeholder="z.B. 3500"
+                value={formData.currentKWh}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              />
+            </div>
 
-          <div>
-            <label htmlFor="currentPrice" className="block mb-1 font-semibold">
-              Aktueller Strompreis (€/kWh)
-            </label>
-            <input
-              type="text"
-              id="currentPrice"
-              name="currentPrice"
-              placeholder="z.B. 0,30"
-              value={formData.currentPrice}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
+            <div>
+              <label
+                htmlFor="currentPrice"
+                className="block mb-1 font-semibold"
+              >
+                Aktueller Strompreis (€/kWh)
+              </label>
+              <input
+                type="text"
+                id="currentPrice"
+                name="currentPrice"
+                placeholder="z.B. 0,30"
+                value={formData.currentPrice}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              />
+            </div>
 
-          <div>
-            <label htmlFor="currentCharge" className="block mb-1 font-semibold">
-              Aktuelle Grundgebühr (€)
-            </label>
-            <input
-              type="text"
-              id="currentCharge"
-              name="currentCharge"
-              placeholder="z.B. 1050"
-              value={formData.currentCharge}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
-            />
+            <div>
+              <label
+                htmlFor="currentCharge"
+                className="block mb-1 font-semibold"
+              >
+                Aktuelle Grundgebühr (€)
+              </label>
+              <input
+                type="text"
+                id="currentCharge"
+                name="currentCharge"
+                placeholder="z.B. 1050"
+                value={formData.currentCharge}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              />
+            </div>
           </div>
-
           <div className="col-span-2">
             <label htmlFor="selects" className="block mb-1 font-semibold">
               Ist eins oder mehrere der folgenden Themen für Sie relevant?
@@ -308,7 +315,7 @@ function Kontakt() {
               name="image"
               accept="image/*"
               onChange={handleChange}
-              className="w-1/2 px-4 py-3 mt-2 border border-gray-300 rounded-md"
+              className="w-full md:w-1/2 px-4 py-3 mt-2 border border-gray-300 rounded-md"
             />
           </div>
         </div>
