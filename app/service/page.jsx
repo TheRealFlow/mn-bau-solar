@@ -128,7 +128,7 @@ function Service() {
       {/* Schlusstext */}
       <div className="max-w-4xl mx-auto py-6 px-4 text-center">
         <h2 className="text-xl font-semibold mb-4">
-          Entdecken Sie das Mieterstrom-Modell
+          Entdecken Sie das Mieterstrommodell
         </h2>
         <div className="bg-gray-100 text-gray-700 rounded-lg p-4 mb-10">
           <p className="mb-4">
@@ -138,8 +138,8 @@ function Service() {
             Sie!
           </p>
           <p className="mb-4">
-            Mit der uns haben Sie die Möglichkeit, Ihren eigenen Strom zu
-            erzeugen und direkt an Ihre Mieter weiterzugeben. Dank modernster
+            Mit uns haben Sie die Möglichkeit, Ihren eigenen Strom zu erzeugen
+            und direkt an Ihre Mieter weiterzugeben. Dank modernster
             Solartechnologie und unserer umfangreichen Expertise in der
             Energiebranche können wir Ihnen ein maßgeschneidertes Konzept
             bieten, das sowohl ökonomisch als auch ökologisch überzeugt. Die

@@ -15,7 +15,7 @@ function About() {
             className="mx-auto pt-2 pb-8"
           />
           <p className="text-lg text-gray-700 mb-6">
-            Ihrem Partner für nachhaltige Energie.
+            Ihr Partner für nachhaltige Energie.
           </p>
           <p className="text-gray-700 mb-6">
             Wir sind stolz darauf, unseren Kunden umfassende Dienstleistungen in
