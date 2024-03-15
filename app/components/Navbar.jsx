@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,6 +9,7 @@ import { HiMenu } from "react-icons/hi";
 const Navbar = () => {
   const navigate = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -17,6 +18,20 @@ const Navbar = () => {
   const closeNavbar = () => {
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header>
@@ -36,7 +51,7 @@ const Navbar = () => {
           </div>
 
           {/* Links */}
-          <div className="hidden lg:flex font-semibold text-lg">
+          <div className="hidden xl:flex font-semibold text-lg">
             <ul className="flex lg:space-x-8 md:space-x-4">
               <NavItem href="/aktuelles">Aktuelles</NavItem>
               <NavItem href="/about">Über uns</NavItem>
@@ -59,7 +74,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu */}
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             {/* Hamburger Menu Icon */}
             <HiMenu
               onClick={toggleNavbar}
@@ -68,11 +83,12 @@ const Navbar = () => {
           </div>
           {/* Links */}
           <div
+            ref={menuRef}
             className={` text-lg ${
               isOpen ? "flex" : "hidden"
-            } absolute top-full right-0 w-1/2 md:w-1/4  bg-white lg:bg-transparent `}
+            } absolute top-full right-0 w-1/2 md:w-1/4  bg-white xl:bg-transparent `}
           >
-            <ul className="lg:hidden flex flex-col m-5 gap-2">
+            <ul className="xl:hidden flex flex-col m-5 gap-2">
               <NavItem href="/aktuelles" onClick={closeNavbar}>
                 Aktuelles
               </NavItem>
