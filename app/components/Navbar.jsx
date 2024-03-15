@@ -38,10 +38,10 @@ const Navbar = () => {
           {/* Links */}
           <div className="hidden lg:flex font-semibold text-lg">
             <ul className="flex lg:space-x-8 md:space-x-4">
+              <NavItem href="/aktuelles">Aktuelles</NavItem>
               <NavItem href="/about">Über uns</NavItem>
               <NavItem href="/service">Service</NavItem>
               <NavItem href="/projekte">Projekte</NavItem>
-              <NavItem href="/angebote">Angebote</NavItem>
               <NavItem href="/finanzierung">Finanzierung</NavItem>
               <NavItem href="/kontakt">Kontakt</NavItem>
             </ul>
@@ -73,6 +73,9 @@ const Navbar = () => {
             } absolute top-full right-0 w-1/2 md:w-1/4  bg-white lg:bg-transparent `}
           >
             <ul className="lg:hidden flex flex-col m-5 gap-2">
+              <NavItem href="/aktuelles" onClick={closeNavbar}>
+                Aktuelles
+              </NavItem>
               <NavItem href="/about" onClick={closeNavbar}>
                 Über uns
               </NavItem>
@@ -81,9 +84,6 @@ const Navbar = () => {
               </NavItem>
               <NavItem href="/projekte" onClick={closeNavbar}>
                 Projekte
-              </NavItem>
-              <NavItem href="/angebote" onClick={closeNavbar}>
-                Angebote
               </NavItem>
               <NavItem href="/finanzierung" onClick={closeNavbar}>
                 Finanzierung
