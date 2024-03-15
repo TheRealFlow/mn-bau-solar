@@ -7,23 +7,22 @@ const Home = () => {
       {/* Hero Bereich */}
       <section className="relative bg-gray-100 min-h-screen flex items-center justify-center overflow-hidden">
         <div className="container mx-auto text-center flex flex-col justify-center items-center gap-4 z-10">
-          <Image
-            src="/logo_squere.webp"
-            alt="MN-Bau & Solar Logo"
-            width={300}
-            height={300}
-            objectFit="cover"
-            quality={100}
-          />
-          <p className="text-lg font-semibold md:text-2xl my-8 text-gray-700">
-            Ihr Partner für nachhaltiges Bauen mit Solarenergie
+          <p className="text-2xl md:text-4xl font-bold my-8 text-gray-900">
+            Werden Sie ein Teil der Energeriewende
           </p>
+          <p className="text-xl font-semibold text-gray-900 mb-8">
+            Nutzen Sie die Sonnenenergie für eine nachhaltige Zukunft. <br />
+            Erhalten Sie jetzt Ihr maßgeschneidertes Angebot.
+          </p>
+          <button className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded-full shadow-lg font-bold transition duration-300 ease-in-out">
+            Jetzt Angebot einholen
+          </button>
         </div>
         <div className="absolute inset-0 z-0">
           <img
-            src="/mn-solar.jpeg"
+            src="/panel_sunset.jpg"
             alt="Solar Panel"
-            className="object-cover object-center w-full h-full opacity-40"
+            className="object-cover object-center w-full h-full opacity-70"
           />
         </div>
       </section>
@@ -87,13 +86,13 @@ const Home = () => {
                 Anfangsinvestitionen erforderlich sind.
               </p>
             </div>
-            <Link
-              className="text-orange-500 text-lg hover:underline text-center col-span-full"
-              href="/service"
-            >
-              Mehr erfahren
-            </Link>
           </div>
+          <Link
+            className="text-orange-500 text-lg hover:underline mt-8 inline-block"
+            href="/service"
+          >
+            Mehr erfahren
+          </Link>
         </div>
       </section>
 
@@ -108,8 +107,8 @@ const Home = () => {
             erfahren? Kontaktieren Sie uns gerne!
           </p>
           <Link
-            className="bg-orange-500 text-white py-3 px-6 rounded-md hover:bg-orange-600 transition duration-300 ease-in-out"
             href="/kontakt"
+            className="bg-orange-500 text-white py-3 px-6 rounded-md hover:bg-orange-600 transition duration-300 ease-in-out inline-block"
           >
             Jetzt kontaktieren
           </Link>
