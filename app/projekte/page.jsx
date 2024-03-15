@@ -20,7 +20,7 @@ function Projekte() {
             die Sonne das Wetter an, sorgt für Wind und Niederschläge und
             schafft so die Voraussetzungen für Wind- und Wasserkraft.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700">
             Die Sonnenergie lässt sich auch vielfältig direkt nutzen.
             Solarzellen in Photovoltaikanlagen, solarthermische Kraftwerke und
             Sonnenkollektoren nutzen die Sonnenstrahlung ohne Umwege und wandeln

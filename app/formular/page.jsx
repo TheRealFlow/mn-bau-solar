@@ -65,9 +65,9 @@ function Kontakt() {
       email: "",
       address: "",
       roofType: "",
-      currentKWh: "",
-      currentPrice: "",
-      currentCharge: "",
+      currentKWh: 0,
+      currentPrice: 0,
+      currentCharge: 0,
       owner: "",
       selects: [],
       image: null,
@@ -116,7 +116,7 @@ function Kontakt() {
                 placeholder="Vor- und Nachname"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
                 required
               />
             </div>
@@ -132,7 +132,7 @@ function Kontakt() {
                 placeholder="max@mustermann.de"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
                 required
               />
             </div>
@@ -142,13 +142,13 @@ function Kontakt() {
                 Telefonnummer
               </label>
               <input
-                type="text"
+                type="tel"
                 id="phone"
                 name="phone"
                 placeholder="0123 4567890"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
             </div>
 
@@ -163,7 +163,7 @@ function Kontakt() {
                 placeholder="Straße, Hausnummer, PLZ, Ort"
                 value={formData.address}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
             </div>
 
@@ -176,7 +176,7 @@ function Kontakt() {
                 name="roofType"
                 value={formData.roofType}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               >
                 <option value="">Bitte auswählen</option>
                 <option value="Satteldach">Satteldach</option>
@@ -200,7 +200,7 @@ function Kontakt() {
                 name="owner"
                 value={formData.owner}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               >
                 <option value="">Bitte auswählen</option>
                 <option value="Eigentümer">Eigentümer</option>
@@ -213,13 +213,13 @@ function Kontakt() {
                 Aktueller Stromverbrauch (kWh)
               </label>
               <input
-                type="text"
+                type="number"
                 id="currentKWh"
                 name="currentKWh"
                 placeholder="z.B. 3500"
                 value={formData.currentKWh}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
             </div>
 
@@ -231,13 +231,13 @@ function Kontakt() {
                 Aktueller Strompreis (€/kWh)
               </label>
               <input
-                type="text"
+                type="number"
                 id="currentPrice"
                 name="currentPrice"
                 placeholder="z.B. 0,30"
                 value={formData.currentPrice}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
             </div>
 
@@ -249,13 +249,13 @@ function Kontakt() {
                 Aktuelle Grundgebühr (€)
               </label>
               <input
-                type="text"
+                type="number"
                 id="currentCharge"
                 name="currentCharge"
                 placeholder="z.B. 1050"
                 value={formData.currentCharge}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
             </div>
           </div>

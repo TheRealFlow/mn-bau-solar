@@ -59,7 +59,7 @@ function Kontakt() {
                 placeholder="Vor- und Nachname"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
                 required
               />
             </div>
@@ -74,7 +74,7 @@ function Kontakt() {
                 placeholder="max@mustermann.de"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
                 required
               />
             </div>
@@ -83,13 +83,13 @@ function Kontakt() {
                 Telefonnummer
               </label>
               <input
-                type="text"
+                type="tel"
                 id="phone"
                 name="phone"
                 placeholder="0123 4567890"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
             </div>
 
@@ -104,7 +104,7 @@ function Kontakt() {
                 placeholder="Straße, Hausnummer, PLZ, Ort"
                 value={formData.address}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
             </div>
           </div>
@@ -119,7 +119,7 @@ function Kontakt() {
               placeholder="Betreff Ihrer Nachricht"
               value={formData.subject}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
             />
           </div>
           <div className="col-span-2">
@@ -132,7 +132,7 @@ function Kontakt() {
               placeholder="Ihre Nachricht an uns"
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               rows={5}
             ></textarea>
           </div>

@@ -58,7 +58,7 @@ function About() {
             für Ihr Unternehmen oder Ihre Privatwohnung zu planen und zu
             installieren.
           </p>
-          <p className="text-lg text-gray-700 mb-4">
+          <p className="text-lg text-gray-700">
             Wir freuen uns darauf, von Ihnen zu hören!
           </p>
         </div>
