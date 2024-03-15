@@ -30,15 +30,15 @@ const ImageCarousel = () => {
 
   return (
     <div className="container mx-auto text-center my-6 mb-20">
-      <div className="mx-auto max-w-4xl flex gap-6">
+      <div className="mx-auto max-w-4xl flex flex-col md:flex-row justify-center gap-6">
         <button
-          className=" bg-gray-200 px-4 py-2 rounded-l-lg"
+          className="hidden md:block bg-gray-200 px-4 py-2 rounded-l-lg mb-4 md:mb-0"
           onClick={handlePrev}
         >
-          Prev
+          Zurück
         </button>
 
-        <div className="overflow-hidden">
+        <div className="overflow-hidden w-full md:w-3/5">
           <div
             className="flex transition-transform ease-in-out duration-300"
             style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
@@ -48,17 +48,25 @@ const ImageCarousel = () => {
                 key={index}
                 src={imageUrl}
                 alt={`Placeholder Image ${index}`}
-                className="w-full"
+                className="w-full h-auto"
               />
             ))}
           </div>
         </div>
-        <button
-          className=" bg-gray-200 px-4 py-2 rounded-r-lg"
-          onClick={handleNext}
-        >
-          Next
-        </button>
+        <div className="flex gap-10 justify-center">
+          <button
+            className="md:hidden bg-gray-200 px-4 py-2 rounded-l-lg mb-4 md:mb-0"
+            onClick={handlePrev}
+          >
+            Zurück
+          </button>
+          <button
+            className="bg-gray-200 px-4 py-2 rounded-r-lg mb-4 md:mb-0"
+            onClick={handleNext}
+          >
+            Weiter
+          </button>
+        </div>
       </div>
     </div>
   );
