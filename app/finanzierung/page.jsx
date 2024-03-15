@@ -58,72 +58,70 @@ function Finanzierung() {
   ];
 
   return (
-    <>
-      <div className="container mx-auto text-center mt-20">
-        <div className="max-w-4xl mx-auto py-6 px-4">
-          <h2 className="text-xl font-semibold mb-2">
-            Finanzieren Sie Ihre Photovoltaikanlage durch unser
-            Partnerunternehmen!
-          </h2>
-          <div className="bg-gray-100 rounded-lg p-4 my-4">
-            <p className="text-gray-700">
-              Wir verstehen, dass die Investition in eine Photovoltaikanlage
-              eine bedeutende Entscheidung ist. Deshalb freuen wir uns, Ihnen
-              die Möglichkeit zu bieten, Ihre Anlage mithilfe unseres
-              vertrauenswürdigen Partnerunternehmens zu finanzieren. Mit
-              maßgeschneiderten Finanzierungslösungen und attraktiven
-              Konditionen helfen wir Ihnen, den Weg zur sauberen Energie ohne
-              finanzielle Hürden zu beschreiten.
-            </p>
-          </div>
+    <div className="container min-h-screen mx-auto text-center mt-20">
+      <div className="max-w-4xl mx-auto py-6 px-4">
+        <h2 className="text-xl font-semibold mb-2">
+          Finanzieren Sie Ihre Photovoltaikanlage durch unser
+          Partnerunternehmen!
+        </h2>
+        <div className="bg-gray-100 rounded-lg p-4 my-4">
+          <p className="text-gray-700">
+            Wir verstehen, dass die Investition in eine Photovoltaikanlage eine
+            bedeutende Entscheidung ist. Deshalb freuen wir uns, Ihnen die
+            Möglichkeit zu bieten, Ihre Anlage mithilfe unseres
+            vertrauenswürdigen Partnerunternehmens zu finanzieren. Mit
+            maßgeschneiderten Finanzierungslösungen und attraktiven Konditionen
+            helfen wir Ihnen, den Weg zur sauberen Energie ohne finanzielle
+            Hürden zu beschreiten.
+          </p>
+        </div>
 
-          <div className="max-w-3xl mx-auto my-4 px-4">
-            {offers.map((offer, index) => (
-              <div key={index} className="mb-4">
-                <button
-                  className={`flex justify-between items-center w-full text-left bg-orange-500 hover:bg-orange-600 text-gray-800 font-bold py-2 px-4 rounded`}
-                >
-                  {offer.title}
-                  {offer.icon}
-                </button>
+        <div className="max-w-3xl mx-auto my-4 px-4">
+          {offers.map((offer, index) => (
+            <div key={index} className="mb-4">
+              <button
+                className={`flex justify-between items-center w-full text-left bg-orange-500 hover:bg-orange-600 text-gray-800 font-bold py-2 px-4 rounded`}
+              >
+                {offer.title}
+                {offer.icon}
+              </button>
 
-                <div className="flex justify-between text-left mt-2 border-l-2 border-green-600 pl-2">
-                  {offer.content}
-                </div>
+              <div className="flex justify-between text-left mt-2 border-l-2 border-green-600 pl-2">
+                {offer.content}
               </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto my-4 px-8 pb-8">
-          <button
-            onClick={() => {
-              navigate.push("/kontakt");
-            }}
-            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Kontaktieren Sie uns jetzt für Ihr unverbindliches
-            Finanzierungsangebot
-          </button>
-        </div>
-
-        <div className="max-w-3xl mx-auto my-4 px-8 pb-8">
-          <button
-            className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
-            onClick={() => {
-              window.open(
-                "/Kundenexemplar_Flyer_Solarkredit_Stand_05_01_2024_Sonderkonditionen.pdf"
-              );
-            }}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFilePdf className="hidden md:inline-block md:mr-2 md:mb-1" />
-            Finanzierungsbeispiel herunterladen
-          </button>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+
+      <div className="max-w-3xl mx-auto my-4 px-8 pb-8">
+        <button
+          onClick={() => {
+            navigate.push("/kontakt");
+          }}
+          className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Kontaktieren Sie uns jetzt für Ihr unverbindliches
+          Finanzierungsangebot
+        </button>
+      </div>
+
+      <div className="max-w-3xl mx-auto my-4 px-8 pb-8">
+        <button
+          className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+          onClick={() => {
+            window.open(
+              "/Kundenexemplar_Flyer_Solarkredit_Stand_05_01_2024_Sonderkonditionen.pdf"
+            );
+          }}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaFilePdf className="hidden md:inline-block md:mr-2 md:mb-1" />
+          Finanzierungsbeispiel herunterladen
+        </button>
+      </div>
+    </div>
   );
 }
 

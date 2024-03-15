@@ -58,9 +58,9 @@ function Service() {
   };
 
   return (
-    <>
+    <div className="min-h-screen">
       {/* Hero Bereich */}
-      <div className="container mx-auto text-center mt-20">
+      <div className="container mx-auto text-center mt-20 ">
         <div className="max-w-4xl mx-auto py-6 px-4">
           <h2 className="text-xl font-semibold mb-4">
             Sie interessieren sich für eine Solaranlage?
@@ -179,7 +179,7 @@ function Service() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
