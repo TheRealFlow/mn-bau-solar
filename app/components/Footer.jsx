@@ -41,12 +41,12 @@ const Footer = () => {
         </div>
         {/* Mittig */}
         <div className="w-full md:w-1/3 text-center">
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center space-x-5">
             <Link
               href="https://www.facebook.com/people/MN-Bau-Solar-GbR/100082861136495/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-orange-600 text-2xl"
+              className="text-white hover:text-orange-600 text-3xl"
             >
               <FaFacebook />
             </Link>
@@ -54,7 +54,7 @@ const Footer = () => {
               href="https://www.instagram.com/mnbausolar/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-orange-600 text-2xl"
+              className="text-white hover:text-orange-600 text-3xl"
             >
               <FaInstagram />
             </Link>
@@ -62,7 +62,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/jens-meiwald-768a79249/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-orange-600 text-2xl"
+              className="text-white hover:text-orange-600 text-3xl"
             >
               <FaLinkedin />
             </Link>
@@ -70,17 +70,9 @@ const Footer = () => {
               href="https://web.whatsapp.com/send?phone=4915146395042"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-orange-600 text-2xl"
+              className="text-white hover:text-orange-600 text-3xl"
             >
               <FaWhatsapp />
-            </Link>
-            <Link
-              href="https://www.google.de/search?sca_esv=3c569254cd59810a&sxsrf=ACQVn0-wUXyrPaVGNCXvYuxQJc2_qUsIhA:1710205613004&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu6ob01DzknnhsvKfzUl3NCFACw5rCcw0OijEm9dTM_Q-3kxHsn4sYtDImh1ORihlj1IdlMhfMFrGeKzpgPLYoF_6ZAXsvCwRsJs_uqSPTPwGrMnpu&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SfPWRARqf7nZwpVBitvihJ7cJGoPC_OpegrlmuYmhWaD30smhQ%3D&q=MNBau+%26+Solar+GbR+Rezensionen&sa=X&ved=2ahUKEwi49LiwxO2EAxWlnf0HHd_TD90Q3PALegQIXBAF&cshid=1710205744166576&biw=1920&bih=968"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-orange-600 text-2xl"
-            >
-              <FaGoogle />
             </Link>
           </div>
           <p className="mt-4">
@@ -89,7 +81,23 @@ const Footer = () => {
           </p>
         </div>
         {/* Rechtsbündig */}
-        <div className="w-full md:w-1/3">
+        <div className="w-full md:w-1/3 space-y-4">
+          <div className="flex justify-center md:justify-end space-x-5">
+            <a
+              href="https://www.google.de/search?sca_esv=3c569254cd59810a&sxsrf=ACQVn0-wUXyrPaVGNCXvYuxQJc2_qUsIhA:1710205613004&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu6ob01DzknnhsvKfzUl3NCFACw5rCcw0OijEm9dTM_Q-3kxHsn4sYtDImh1ORihlj1IdlMhfMFrGeKzpgPLYoF_6ZAXsvCwRsJs_uqSPTPwGrMnpu&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SfPWRARqf7nZwpVBitvihJ7cJGoPC_OpegrlmuYmhWaD30smhQ%3D&q=MNBau+%26+Solar+GbR+Rezensionen&sa=X&ved=2ahUKEwi49LiwxO2EAxWlnf0HHd_TD90Q3PALegQIXBAF&cshid=1710205744166576&biw=1920&bih=968"
+              className="text-lg font-semibold text-orange-600"
+            >
+              Bewerten Sie uns bei Google
+            </a>
+            <Link
+              href="https://www.google.de/search?sca_esv=3c569254cd59810a&sxsrf=ACQVn0-wUXyrPaVGNCXvYuxQJc2_qUsIhA:1710205613004&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu6ob01DzknnhsvKfzUl3NCFACw5rCcw0OijEm9dTM_Q-3kxHsn4sYtDImh1ORihlj1IdlMhfMFrGeKzpgPLYoF_6ZAXsvCwRsJs_uqSPTPwGrMnpu&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SfPWRARqf7nZwpVBitvihJ7cJGoPC_OpegrlmuYmhWaD30smhQ%3D&q=MNBau+%26+Solar+GbR+Rezensionen&sa=X&ved=2ahUKEwi49LiwxO2EAxWlnf0HHd_TD90Q3PALegQIXBAF&cshid=1710205744166576&biw=1920&bih=968"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-orange-600"
+            >
+              <FaGoogle />
+            </Link>
+          </div>
           <ul className="flex space-x-6 md:justify-end justify-center">
             <li>
               <Link
