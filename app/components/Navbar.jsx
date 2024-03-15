@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="fixed top-0 w-full bg-transparent p-4 backdrop-blur-md border-b-2 z-50">
+      <nav className="fixed top-0 w-full bg-transparent p-4 backdrop-blur-md z-50">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <div>
@@ -67,7 +67,7 @@ const Navbar = () => {
             <button
               href="/formular"
               className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold mx-4 py-2 px-2 rounded-md inline-block md:mt-0"
-              onClick={() => navigate.push("formular")}
+              onClick={() => navigate.push("/formular")}
             >
               Angebot einholen
             </button>
