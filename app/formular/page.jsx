@@ -101,7 +101,7 @@ function Kontakt() {
 
       <form
         onSubmit={handleSubmit}
-        className="max-w-4xl mx-auto bg-gray-100 rounded-lg py-6 px-4"
+        className="max-w-4xl md:mx-auto bg-gray-100 rounded-lg py-6 px-4 mx-4"
       >
         <div className="flex flex-col gap-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

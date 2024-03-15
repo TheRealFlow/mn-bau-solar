@@ -6,11 +6,11 @@ const Home = () => {
     <>
       {/* Hero Bereich */}
       <section className="relative bg-gray-100 min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="container mx-auto text-center flex flex-col justify-center items-center gap-4 z-10">
-          <p className="text-2xl md:text-4xl font-bold my-8 text-gray-900">
+        <div className="container md:mx-auto text-center flex flex-col justify-center items-center gap-4 z-10 mx-4">
+          <p className="text-2xl md:text-4xl font-bold my-4 text-white">
             Werden Sie ein Teil der Energeriewende
           </p>
-          <p className="text-xl font-semibold text-gray-900 mb-8">
+          <p className="text-xl font-semibold text-white mb-8">
             Nutzen Sie die Sonnenenergie für eine nachhaltige Zukunft. <br />
             Erhalten Sie jetzt Ihr maßgeschneidertes Angebot.
           </p>
