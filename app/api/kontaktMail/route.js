@@ -4,7 +4,7 @@ import KontaktMail from "../../components/KontaktMail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req, res) {
+export async function POST(req) {
   const { name, email, phone, address, subject, message } = await req.json();
 
   try {

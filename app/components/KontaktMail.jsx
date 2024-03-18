@@ -10,7 +10,7 @@ import {
   Text,
 } from "@react-email/components";
 
-const MessageUsEmail = ({ name, email, phone, address, subject, message }) => {
+const KontaktMail = ({ name, email, phone, address, subject, message }) => {
   const previewText = `Neue Nachricht über das Kontaktformular.`;
 
   return (
@@ -46,4 +46,4 @@ const MessageUsEmail = ({ name, email, phone, address, subject, message }) => {
   );
 };
 
-export default MessageUsEmail;
+export default KontaktMail;
