@@ -75,10 +75,20 @@ const Footer = () => {
               <FaWhatsapp />
             </Link>
           </div>
-          <p className="mt-4">
-            © {new Date().getFullYear()} MN-Bau & Solar GbR. Alle Rechte
-            vorbehalten.
-          </p>
+          <div>
+            <p className="mt-4">
+              © {new Date().getFullYear()} MN-Bau & Solar GbR. Alle Rechte
+              vorbehalten.
+            </p>
+            <Link
+              href="https://florianludwig.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-orange-600 font-mono text-xs mt-4 block"
+            >
+              Design und Entwicklung von Florian Ludwig
+            </Link>
+          </div>
         </div>
         {/* Rechtsbündig */}
         <div className="w-full md:w-1/3 space-y-4">
@@ -100,7 +110,7 @@ const Footer = () => {
               <FaGoogle />
             </Link>
           </div>
-          <ul className="flex space-x-6 md:justify-end justify-center">
+          <ul className="flex space-x-6 md:justify-end justify-center ">
             <li>
               <Link
                 className="font-bold hover:text-orange-600"
