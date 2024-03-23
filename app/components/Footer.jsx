@@ -84,9 +84,9 @@ const Footer = () => {
               href="https://florianludwig.de/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 font-mono text-xs mt-4 block"
+              className="hover:text-orange-600 font-mono text-xs mt-4 hidden md:block"
             >
-              Design und Entwicklung von Florian Ludwig
+              Design und Entwicklung von WebFlow
             </Link>
           </div>
         </div>
@@ -138,6 +138,16 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
+        </div>
+        <div className="w-full md:w-1/3 text-center md:hidden">
+          <Link
+            href="https://florianludwig.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-orange-600 font-mono text-xs mt-4"
+          >
+            Design und Entwicklung von WebFlow
+          </Link>
         </div>
       </div>
     </footer>
