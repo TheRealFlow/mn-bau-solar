@@ -81,7 +81,7 @@ const Footer = () => {
               vorbehalten.
             </p>
             <Link
-              href="https://florianludwig.de/"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-600 font-mono text-xs mt-4 hidden md:block"
@@ -141,7 +141,7 @@ const Footer = () => {
         </div>
         <div className="w-full md:w-1/3 text-center md:hidden">
           <Link
-            href="https://florianludwig.de/"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-orange-600 font-mono text-xs mt-4"
