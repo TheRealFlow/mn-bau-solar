@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactForm() {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -17,6 +18,8 @@ export default function ContactForm() {
 
   async function onSubmit(formData) {
     try {
+      setIsLoading(true);
+
       await fetch("/api/kontaktMail", {
         method: "POST",
         headers: {
@@ -34,6 +37,8 @@ export default function ContactForm() {
       toast.error(
         "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
       );
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -141,11 +146,11 @@ export default function ContactForm() {
           </div>
         </div>
         <button
-          disabled={isSubmitting}
+          disabled={isLoading}
           type="submit"
-          className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold px-6 py-2 rounded-md mt-4 block mx-auto"
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold px-8 py-2 rounded-md mt-8 block mx-auto"
         >
-          Absenden
+          {isLoading ? "Sendet.." : "Angebot unverbindlich anfordern"}
         </button>
       </form>
     </>

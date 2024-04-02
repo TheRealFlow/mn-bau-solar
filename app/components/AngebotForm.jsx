@@ -6,21 +6,54 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function AngebotForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { isSubmitting },
-    reset,
-  } = useForm();
+  const [isLoading, setIsLoading] = useState(false);
+  const { register, handleSubmit, reset } = useForm();
+  const [selectedFiles, setSelectedFiles] = useState([]);
+
+  const handleFileChange = async (e) => {
+    const files = e.target.files;
+    if (files) {
+      try {
+        const base64Images = await Promise.all(
+          Array.from(files).map(async (file) => ({
+            name: file.name,
+            content: await getBase64(file),
+          }))
+        );
+        setSelectedFiles((prevFiles) => [...prevFiles, ...base64Images]);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  };
+
+  const getBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result.split(",")[1]);
+      reader.onerror = (error) => reject(error);
+    });
+  };
 
   async function onSubmit(formData) {
     try {
-      await fetch("/api/angebotMail", {
+      setIsLoading(true);
+
+      const files = formData.attachments;
+      const base64Images = await Promise.all(
+        Array.from(files).map(async (file) => ({
+          name: file.name,
+          content: await getBase64(file),
+        }))
+      );
+      formData.attachments = selectedFiles.concat(base64Images);
+
+      const response = await fetch("/api/angebotMail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify(formData),
       }).then(() => {
         toast.success(
@@ -28,11 +61,12 @@ export default function AngebotForm() {
         );
         reset();
       });
-      setMessageCount(0);
     } catch (error) {
       toast.error(
         "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
       );
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -151,6 +185,7 @@ export default function AngebotForm() {
                 type="number"
                 id="currentKWh"
                 placeholder="z.B. 3500"
+                min="0"
                 {...register("currentKWh")}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
@@ -164,9 +199,10 @@ export default function AngebotForm() {
                 Aktueller Strompreis (€/kWh)
               </label>
               <input
-                type="number"
+                type="float"
                 id="currentPrice"
                 placeholder="z.B. 0,30"
+                min="0.01"
                 {...register("currentPrice")}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
@@ -183,6 +219,7 @@ export default function AngebotForm() {
                 type="number"
                 id="currentCharge"
                 placeholder="z.B. 1050"
+                min="0"
                 {...register("currentCharge")}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-600"
               />
@@ -196,6 +233,7 @@ export default function AngebotForm() {
               <label className="inline-flex items-center mr-4">
                 <input
                   type="checkbox"
+                  value="Stromspeicher"
                   {...register("selects")}
                   className="form-checkbox"
                 />
@@ -204,6 +242,7 @@ export default function AngebotForm() {
               <label className="inline-flex items-center mr-4">
                 <input
                   type="checkbox"
+                  value="Laden eines E-Fahrzeugs"
                   {...register("selects")}
                   className="form-checkbox"
                 />
@@ -212,6 +251,7 @@ export default function AngebotForm() {
               <label className="inline-flex items-center mr-4">
                 <input
                   type="checkbox"
+                  value="Heizen mit Strom"
                   {...register("selects")}
                   className="form-checkbox"
                 />
@@ -221,31 +261,39 @@ export default function AngebotForm() {
               </label>
             </div>
           </div>
-
-          {/* <div className="col-span-2">
+          <div className="col-span-2">
             <label htmlFor="image" className="block my-3 font-semibold">
-              Laden Sie hier Bilder (max. 20MB) Ihres Daches und sowie die
-              Vorder und Rückseite Ihres Dachsteines hoch. Gerne auch vorab
-              schon Bilder vom Zählerschrank (offen und geschlossen),
-              Potentialausgleichschiene und Hauptanschlusskasten.
+              Laden Sie hier Bilder Ihres Daches und sowie die Vorder und
+              Rückseite Ihres Dachsteines hoch. Gerne auch vorab schon Bilder
+              vom Zählerschrank (offen und geschlossen),
+              Potentialausgleichschiene und Hauptanschlusskasten. - (max. 10MB
+              insgesamt)
             </label>
             <input
               type="file"
-              id="image"
-              {...register("image")}
-              onChange={handleImageChange}
+              multiple
               accept="image/*"
+              id="image"
+              {...register("attachments", { multiple: true })}
+              onChange={handleFileChange}
               className="w-full md:w-1/2 px-4 py-3 mt-2 border border-gray-300 rounded-md"
             />
-          </div> */}
+            <div>
+              {selectedFiles.map((file, index) => (
+                <div key={index}>
+                  <p>{file.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <button
-          disabled={isSubmitting}
+          disabled={isLoading}
           type="submit"
           className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold px-8 py-2 rounded-md mt-8 block mx-auto"
         >
-          Angebot unverbindlich anfordern
+          {isLoading ? "Sendet.." : "Angebot unverbindlich anfordern"}
         </button>
       </form>
     </>

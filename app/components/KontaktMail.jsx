@@ -19,26 +19,30 @@ const KontaktMail = ({ name, email, phone, address, subject, message }) => {
       <Preview>{previewText}</Preview>
       <Tailwind>
         <Body className="bg-white my-auto mx-auto font-sans">
-          <Container className="my-[20px] mx-auto p-[20px] max-w-4xl">
-            <Heading className="text-black text-[20px] font-normal text-left">
+          <Container className="mx-auto p-20 max-w-4xl">
+            <Heading className="text-black text-2xl font-bold text-left mb-4">
               <strong>{subject},</strong>
             </Heading>
-            <Text className="text-black text-[14px] leading-[24px]">
-              {message}
-            </Text>
+            <Text className="text-black text-xl leading-6 mb-8">{message}</Text>
 
-            <Hr className="my-[16px] mx-0 w-full" />
-            <Text className="text-[#666666] text-[12px]">
-              Der Absender hat folgende Kontaktdaten hinterlassen:
+            <Hr className="my-6 mx-0 w-full" />
+            <Text className="text-[#666666] text-lg font-bold">
+              Der Absender hat folgende Informationen zur Verfügung gestellt:
             </Text>
-            <Text className="text-[#666666] text-[12px]">Name: {name}</Text>
-            <Text className="text-[#666666] text-[12px]">E-Mail: {email}</Text>
-            <Text className="text-[#666666] text-[12px]">
-              Telefonnummer: {phone}
-            </Text>
-            <Text className="text-[#666666] text-[12px]">
-              Adresse: {address}
-            </Text>
+            <div className="text-[#666666] text-lg">
+              <div className="mb-2">
+                <strong>Name:</strong> {name}
+              </div>
+              <div className="mb-2">
+                <strong>E-Mail:</strong> {email}
+              </div>
+              <div className="mb-2">
+                <strong>Telefonnummer:</strong> {phone}
+              </div>
+              <div className="mb-2">
+                <strong>Adresse:</strong> {address}
+              </div>
+            </div>
           </Container>
         </Body>
       </Tailwind>

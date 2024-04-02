@@ -86,10 +86,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-orange-600 font-semibold text-xs mt-4 hidden md:block"
             >
-              Design und Entwicklung von{" "}
-              <span className="text-green-500 font-semibold">F</span>
-              low<span className="text-green-500 font-semibold">W</span>eb
-              <span className="text-green-500 font-semibold">S</span>olutions
+              Design und Entwicklung von FlowWebSolutions
             </Link>
           </div>
         </div>
@@ -149,10 +146,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="hover:text-orange-600 font-semibold text-xs mt-4"
           >
-            Design und Entwicklung von{" "}
-            <span className="text-green-500 font-semibold">F</span>
-            low<span className="text-green-500 font-semibold">W</span>eb
-            <span className="text-green-500 font-semibold">S</span>olutions
+            Design und Entwicklung von FlowWebSolutions
           </Link>
         </div>
       </div>

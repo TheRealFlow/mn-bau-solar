@@ -16,14 +16,14 @@ export async function POST(req) {
     currentPrice,
     currentCharge,
     selects,
-    //image, // Assuming you're receiving the image as a file in the request body
+    attachments,
   } = await req.json();
 
   try {
     const data = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
       to: process.env.EMAIL_ADDRESS,
-      subject: `Neue Angebotsanfrage`,
+      subject: `Neue Angebotsanfrage von ${name}`,
       react: AngebotMail({
         name,
         email,
@@ -35,18 +35,17 @@ export async function POST(req) {
         currentPrice,
         currentCharge,
         selects,
+        attachments: attachments.map((attachment) => ({
+          filename: attachment.name,
+          content: attachment.content,
+        })),
       }),
-      //   attachments: [
-      //     {
-      //       filename: image.name, // Assuming image is a file object with a 'name' property
-      //       content: image.data.toString("base64"), // Assuming 'image' is a Buffer
-      //       encoding: "base64",
-      //     },
-      //   ],
     });
 
+    console.log(data);
     return Response.json(data);
   } catch (error) {
-    return Response.json({ error });
+    console.error(error);
+    return Response.json(error);
   }
 }
