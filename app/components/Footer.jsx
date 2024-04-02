@@ -84,9 +84,12 @@ const Footer = () => {
               href="/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 font-mono text-xs mt-4 hidden md:block"
+              className="hover:text-orange-600 font-semibold text-xs mt-4 hidden md:block"
             >
-              Design und Entwicklung von WebFlow
+              Design und Entwicklung von{" "}
+              <span className="text-green-500 font-semibold">F</span>
+              low<span className="text-green-500 font-semibold">W</span>eb
+              <span className="text-green-500 font-semibold">S</span>olutions
             </Link>
           </div>
         </div>
@@ -144,9 +147,12 @@ const Footer = () => {
             href="/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-orange-600 font-mono text-xs mt-4"
+            className="hover:text-orange-600 font-semibold text-xs mt-4"
           >
-            Design und Entwicklung von WebFlow
+            Design und Entwicklung von{" "}
+            <span className="text-green-500 font-semibold">F</span>
+            low<span className="text-green-500 font-semibold">W</span>eb
+            <span className="text-green-500 font-semibold">S</span>olutions
           </Link>
         </div>
       </div>
