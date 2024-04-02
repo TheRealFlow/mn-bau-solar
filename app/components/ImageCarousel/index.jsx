@@ -22,7 +22,7 @@ const ImageCarousel = () => {
   return (
     <div className="container mx-auto text-center my-6 mb-20">
       <div className="mx-auto max-w-4xl flex flex-col justify-center gap-6">
-        <div className="overflow-hidden h-auto w-full md:w-full">
+        <div className="overflow-x-auto scrollbar-hide">
           <div
             className="flex transition-transform ease-in-out duration-300"
             style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
@@ -33,7 +33,7 @@ const ImageCarousel = () => {
                 src={imageUrl}
                 alt={`Image ${index}`}
                 width={900}
-                height={10}
+                height={450}
                 className="border rounded-lg"
               />
             ))}

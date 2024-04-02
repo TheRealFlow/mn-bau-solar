@@ -21,7 +21,7 @@ export async function POST(req) {
 
   try {
     const data = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "Angebotsformular <info@mnbausolar.de",
       to: process.env.EMAIL_ADDRESS,
       subject: `Neue Angebotsanfrage von ${name}`,
       react: AngebotMail({
