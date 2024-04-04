@@ -31,9 +31,9 @@ export default function ImageCarousel() {
   return (
     <div className="container mx-auto text-center my-6 mb-20">
       <div className="mx-auto max-w-4xl flex flex-col justify-center gap-6 relative">
-        <div className="relative overflow-x-hidden">
+        <div className="overflow-x-scroll md:overflow-x-hidden snap-x snap-mandatory">
           <div
-            className="flex transition-transform ease-in-out duration-300 touch"
+            className="flex transition-transform ease-in-out duration-300"
             style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
           >
             {placeholderImages.map((imageUrl, index) => (
