@@ -45,7 +45,7 @@ function Impressum() {
 
         <div className="mb-8">
           <h3 className="text-xl font-semibold mb-2">
-            Angaben zur Berufshaftpflichtversicherung:
+            Angaben zur Betriebshaftpflichtversicherung:
           </h3>
           <p>Name und Sitz des Versicherers:</p>
           <p>HDI Versicherung AG</p>
