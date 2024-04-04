@@ -39,7 +39,7 @@ export default function ImageCarousel() {
             {placeholderImages.map((imageUrl, index) => (
               <div
                 key={index}
-                className="w-full flex-shrink-0 cursor-pointer hover:brightness-90 transition-brightness duration-300"
+                className="w-full flex-shrink-0 cursor-pointer hover:brightness-90 transition-brightness duration-300 snap-start"
                 onClick={() => handleImageClick(index)}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
