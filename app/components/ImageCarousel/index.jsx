@@ -57,7 +57,7 @@ export default function ImageCarousel() {
               </div>
             ))}
           </div>
-          <span className="text-gray-700 text-sm">
+          <span className="text-gray-700 text-sm hidden md:block mt-2">
             {currentImageIndex + 1} / {placeholderImages.length}
           </span>
         </div>
