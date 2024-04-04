@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IMAGES } from "./utils";
 import { FiZoomIn } from "react-icons/fi";
 
-const ImageCarousel = () => {
+export default function ImageCarousel() {
   const placeholderImages = IMAGES;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fullScreenImage, setFullScreenImage] = useState(null);
@@ -31,9 +31,9 @@ const ImageCarousel = () => {
   return (
     <div className="container mx-auto text-center my-6 mb-20">
       <div className="mx-auto max-w-4xl flex flex-col justify-center gap-6 relative">
-        <div className="overflow-x-hidden">
+        <div className="relative overflow-x-hidden">
           <div
-            className="flex transition-transform ease-in-out duration-300"
+            className="flex transition-transform ease-in-out duration-300 touch"
             style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
           >
             {placeholderImages.map((imageUrl, index) => (
@@ -94,6 +94,4 @@ const ImageCarousel = () => {
       </div>
     </div>
   );
-};
-
-export default ImageCarousel;
+}
