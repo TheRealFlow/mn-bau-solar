@@ -9,7 +9,7 @@ export async function POST(req) {
 
   try {
     const data = await resend.emails.send({
-      from: "Kontaktformular <info@mnbausolar.de",
+      from: "Kontaktformular <info@mnbausolar.de>",
       to: process.env.EMAIL_ADDRESS,
       subject: `Neue Nachricht über das Kontaktformular.`,
       react: KontaktMail({ name, email, phone, address, subject, message }),

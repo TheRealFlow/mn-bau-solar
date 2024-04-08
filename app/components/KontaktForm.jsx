@@ -150,7 +150,7 @@ export default function ContactForm() {
           type="submit"
           className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold px-8 py-2 rounded-md mt-8 block mx-auto"
         >
-          {isLoading ? "Sendet.." : "Angebot unverbindlich anfordern"}
+          {isLoading ? "Sendet.." : "Anfrage senden"}
         </button>
       </form>
     </>
