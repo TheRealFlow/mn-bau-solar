@@ -81,12 +81,12 @@ const Footer = () => {
               vorbehalten.
             </p>
             <Link
-              href="/"
+              href="https://flowcode-solutions.de/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-600 font-semibold text-xs mt-4 hidden md:block"
             >
-              Design und Entwicklung von FlowWebSolutions
+              Design und Entwicklung von FlowCode-Solutions
             </Link>
           </div>
         </div>
@@ -141,12 +141,12 @@ const Footer = () => {
         </div>
         <div className="w-full md:w-1/3 text-center md:hidden">
           <Link
-            href="https://flowcode-solutions.com/"
+            href="https://flowcode-solutions.de/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-orange-600 font-semibold text-xs mt-4"
           >
-            Design und Entwicklung von FlowCode Solutions
+            Design und Entwicklung von FlowCode-Solutions
           </Link>
         </div>
       </div>
