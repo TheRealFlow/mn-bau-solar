@@ -21,7 +21,7 @@ function Projekte() {
             schafft so die Voraussetzungen für Wind- und Wasserkraft.
           </p>
           <p className="text-gray-700">
-            Die Sonnenergie lässt sich auch vielfältig direkt nutzen.
+            Die Sonnenenergie lässt sich auch vielfältig direkt nutzen.
             Solarzellen in Photovoltaikanlagen, solarthermische Kraftwerke und
             Sonnenkollektoren nutzen die Sonnenstrahlung ohne Umwege und wandeln
             die Strahlungsenergie in Strom oder Wärme um.
@@ -31,7 +31,7 @@ function Projekte() {
 
       <div className="max-w-4xl mx-auto py-8 px-4">
         <h3 className="text-lg font-semibold">
-          Hier stellen wir Ihnen ein Teil unserer bereit gebauten PV-Anlagen
+          Hier stellen wir Ihnen ein Teil unserer bereits gebauten PV-Anlagen
           vor.
         </h3>
         <ImageCarousel />
