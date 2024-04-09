@@ -17,7 +17,7 @@ const Navbar = ({ nav, openNav }) => {
             <Image
               src="/logo_long_icon.webp"
               alt="MN-Bau & Solar"
-              width={200}
+              width={180}
               height={50}
               objectFit="contain"
             />
@@ -50,7 +50,7 @@ const Navbar = ({ nav, openNav }) => {
         <div>
           <button
             href="/formular"
-            className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold mx-4 py-2 px-1.5 md:px-5 rounded-md inline-block md:mt-0"
+            className="bg-green-600 hover:bg-green-700 text-white text-xs md:text-base font-semibold md:font-bold mx-2 py-2 px-3 md:px-5 rounded-md inline-block md:mt-0"
             onClick={() => navigate.push("/formular")}
           >
             Angebot einholen
