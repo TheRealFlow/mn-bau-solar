@@ -122,19 +122,6 @@ function Datenschutz() {
           </p>
         </div>
         <div className="mt-8 mb-4">
-          <h3 className="text-xl font-semibold mb-2">
-            Recht auf Widerruf oder Widerspruch gegen die Verarbeitung Ihrer
-            Daten
-          </h3>
-          <p>
-            Falls Sie eine Einwilligung zur Verarbeitung Ihrer Daten erteilt
-            haben, können Sie diese jederzeit widerrufen. Ein solcher Widerruf
-            beeinflusst die Zulässigkeit der Verarbeitung Ihrer
-            personenbezogenen Daten, nachdem Sie ihn gegenüber uns ausgesprochen
-            haben.
-          </p>
-        </div>
-        <div className="mt-8 mb-4">
           <h3 className="text-xl font-semibold mb-2">Aufbewahrung von Daten</h3>
           <p>
             Wir speichern personenbezogene Daten, solange dies zur Erfüllung
@@ -256,34 +243,34 @@ function Datenschutz() {
         <div className="mt-8 mb-4">
           <h3 className="text-xl font-semibold mb-2">Routenplaner</h3>
           <p>
-            Wir verwenden Bing Maps von Microsoft auf unserer Webseite, um Ihnen
-            einen interaktiven Routenplaner zur Verfügung zu stellen. Beim
-            Nutzen dieses Service erklären Sie sich damit einverstanden, dass
-            Daten gemäß der Bing Maps Nutzungsbedingungen (
+            Wir verwenden Google Maps auf unserer Webseite, um Ihnen einen
+            interaktiven Routenplaner zur Verfügung zu stellen. Beim Nutzen
+            dieses Service erklären Sie sich damit einverstanden, dass Daten
+            gemäß den Google Maps Nutzungsbedingungen (
             <a
-              href="https://www.microsoft.com/en-us/maps/product/terms"
+              href="https://www.google.com/intl/de_de/help/terms_maps.html"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://www.microsoft.com/en-us/maps/product/terms
+              https://www.google.com/intl/de_de/help/terms_maps.html
             </a>
             ) verarbeitet werden. Sofern Sie die Karte nutzen, z.B. durch
             Anklicken unserer dort aufgeführten Standorte, erfassen wir von
-            Ihnen keinerlei Daten. Ggf. erfasst jedoch das Unternehmen Microsoft
-            Corporation, One Microsoft Way, Redmond, WA 98052-6399 USA im Rahmen
-            von BING Maps personenbezogene oder personenbeziehbare Daten. Wir
-            können nicht beeinflussen welche Daten Microsoft mit BING Maps
-            erfasst, noch wie Microsoft diese verarbeitet und auswertet. Bitte
-            beachten Sie deswegen die Nutzungsbedingungen für BING Maps,
+            Ihnen keinerlei Daten. Ggf. erfasst jedoch das Unternehmen Google
+            LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA im
+            Rahmen von Google Maps personenbezogene oder personenbeziehbare
+            Daten. Wir können nicht beeinflussen, welche Daten Google mit Google
+            Maps erfasst, noch wie Google diese verarbeitet und auswertet. Bitte
+            beachten Sie deswegen die Nutzungsbedingungen für Google Maps,
             abrufbar unter{" "}
             <a
-              href="https://privacy.microsoft.com/de-de/privacystatement/"
+              href="https://policies.google.com/privacy?hl=de"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://privacy.microsoft.com/de-de/privacystatement/
+              https://policies.google.com/privacy?hl=de
             </a>{" "}
-            (dort Bereich BING anklicken).
+            (dort Bereich Google Maps anklicken).
           </p>
         </div>
       </div>

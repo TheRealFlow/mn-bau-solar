@@ -10,8 +10,6 @@ function About() {
             alt="MN-Bau & Solar"
             width={450}
             height={90}
-            objectFit="contain"
-            quality={100}
             className="mx-auto pt-2 pb-8"
           />
           <p className="text-lg text-gray-700 mb-6">

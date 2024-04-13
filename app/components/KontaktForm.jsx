@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
   const {
     register,
     handleSubmit,
@@ -16,11 +17,15 @@ export default function ContactForm() {
 
   const [messageCount, setMessageCount] = useState(0);
 
+  const handlePrivacyCheck = (e) => {
+    setIsPrivacyChecked(e.target.checked);
+  };
+
   async function onSubmit(formData) {
     try {
       setIsLoading(true);
 
-      await fetch("/api/kontaktMail", {
+      await fetch("", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -145,10 +150,29 @@ export default function ContactForm() {
             </p>
           </div>
         </div>
+        <div className="col-span-2">
+          <div className="flex items-center">
+            <input
+              type="checkbox"
+              className="mr-2"
+              onChange={handlePrivacyCheck}
+            />
+            <label htmlFor="privacyPolicy" className="font-semibold">
+              Ich habe die{" "}
+              <a
+                className="text-orange-500 hover:text-orange-600 font-semibold"
+                href="/datenschutz"
+              >
+                Datenschutzerklärung
+              </a>{" "}
+              gelesen und verstanden. *
+            </label>
+          </div>
+        </div>
         <button
-          disabled={isLoading}
+          disabled={isSubmitting || !isPrivacyChecked}
           type="submit"
-          className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold px-8 py-2 rounded-md mt-8 block mx-auto"
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold md:font-bold px-8 py-2 rounded-md mt-8 block mx-auto disabled:bg-gray-400 disabled:cursor-not-allowed transition duration-300 ease-in-out"
         >
           {isLoading ? "Sendet.." : "Anfrage senden"}
         </button>

@@ -19,7 +19,7 @@ const Home = () => {
           </p>
           <button
             className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded-full shadow-lg font-bold transition duration-300 ease-in-out"
-            onClick={() => navigate.push("/formular")}
+            onClick={() => navigate.push("/angebot")}
           >
             Jetzt Angebot einholen
           </button>
