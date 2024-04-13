@@ -25,7 +25,7 @@ export default function ContactForm() {
     try {
       setIsLoading(true);
 
-      await fetch("", {
+      await fetch("/api/kontaktMail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
