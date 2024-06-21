@@ -15,7 +15,7 @@ const Navbar = ({ nav, openNav }) => {
         <div>
           <Link href="/">
             <Image
-              src="/logo_long_icon.webp"
+              src="/logo_long.webp"
               alt="MN-Bau & Solar"
               width={180}
               height={50}
