@@ -80,14 +80,6 @@ const Footer = () => {
               © {new Date().getFullYear()} MN-Bau & Solar GbR. Alle Rechte
               vorbehalten.
             </p>
-            <Link
-              href="https://flowcode-solutions.de/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-orange-600 font-semibold text-xs mt-4 hidden md:block"
-            >
-              Design und Entwicklung von FlowCode-Solutions
-            </Link>
           </div>
         </div>
         {/* Rechtsbündig */}
@@ -138,16 +130,6 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className="w-full md:w-1/3 text-center md:hidden">
-          <Link
-            href="https://flowcode-solutions.de/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-orange-600 font-semibold text-xs mt-4"
-          >
-            Design und Entwicklung von FlowCode-Solutions
-          </Link>
         </div>
       </div>
     </footer>

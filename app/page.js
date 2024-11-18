@@ -48,6 +48,7 @@ const Home = () => {
           >
             Mehr erfahren
           </Link>
+
         </div>
       </section>
 

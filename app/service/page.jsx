@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa";
+import Link from "next/link";
 
 function Service() {
   const navigate = useRouter();
@@ -177,6 +178,29 @@ function Service() {
             Immobilienprojekt und setzen Ihre Vision vom Mieterstrom erfolgreich
             um.
           </p>
+          <div className="space-y-4 mt-4">
+            <Link href="/kontakt">
+              <img
+                  src="mieterstrom_projekt_01.JPG"
+                  alt="Bild vom ersten Angebot"
+                  className="w-full h-auto rounded-lg mb-4"
+              />
+            </Link>
+            <Link href="/kontakt">
+              <img
+                  src="mieterstrom_projekt_02.JPG"
+                  alt="Bild vom zweiten Angebot"
+                  className="w-full h-auto rounded-lg mb-4"
+              />
+            </Link>
+            <Link href="/kontakt">
+              <img
+                  src="mieterstrom_projekt_03.JPG"
+                  alt="Bild vom dritten Angebot"
+                  className="w-full h-auto rounded-lg mb-4"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Impressum() {
   return (
@@ -21,15 +22,16 @@ function Impressum() {
 
         <div className="mb-8">
           <h3 className="text-xl font-semibold mb-2">Kontakt:</h3>
-          <p>Telefon 1: +49 381 40 343 777</p>
-          <p>Telefon 2: +49 381 444 38 962</p>
-          <p>E-Mail: info@mnbausolar.de</p>
+          <p>Telefon 1: <Link href="tel:+4938140343777" className="hover:text-orange-600">+49 381 40 343 777</Link></p>
+          <p>Telefon 2: <Link href="tel:+4938144438962" className="hover:text-orange-600">+49 381 444 38 962</Link></p>
+          <p>E-Mail: <Link href="mailto:info@mnbausolar.de" className="hover:text-orange-600">info@mnbausolar.de</Link></p>
           <p>
             Internetadresse:{" "}
             <a
               href="https://www.mnbausolar.de"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-orange-600"
             >
               www.mnbausolar.de
             </a>
@@ -80,7 +82,7 @@ function Impressum() {
           </p>
         </div>
 
-        <div>
+        <div className="mb-8">
           <h3 className="text-xl font-semibold mb-2">Haftungsausschluss:</h3>
           <h5 className="font-semibold">Haftung für Inhalte</h5>
           <p className="mb-4">
@@ -128,6 +130,17 @@ function Impressum() {
             Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
             entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
             werden wir derartige Inhalte umgehend entfernen.
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold mb-2">Design und Entwicklung:</h3>
+          <p>Florian Ludwig</p>
+          <p>E-Mail: <Link href="mailto:florian.ludwig-hro@gmx.de" className="hover:text-orange-600">
+          florian.ludwig-hro@gmx.de
+          </Link></p>
+          <p>
+            Die Inhalte der Website liegen in der Verantwortung des Betreibers. Ich übernehme keine Haftung für deren Richtigkeit oder rechtliche Konformität.
           </p>
         </div>
       </div>
