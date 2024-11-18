@@ -22,9 +22,27 @@ function Impressum() {
 
         <div className="mb-8">
           <h3 className="text-xl font-semibold mb-2">Kontakt:</h3>
-          <p>Telefon 1: <Link href="tel:+4938140343777" className="hover:text-orange-600">+49 381 40 343 777</Link></p>
-          <p>Telefon 2: <Link href="tel:+4938144438962" className="hover:text-orange-600">+49 381 444 38 962</Link></p>
-          <p>E-Mail: <Link href="mailto:info@mnbausolar.de" className="hover:text-orange-600">info@mnbausolar.de</Link></p>
+          <p>
+            Telefon 1:{" "}
+            <Link href="tel:+4938140343777" className="hover:text-orange-600">
+              +49 381 40 343 777
+            </Link>
+          </p>
+          <p>
+            Telefon 2:{" "}
+            <Link href="tel:+4938144438962" className="hover:text-orange-600">
+              +49 381 444 38 962
+            </Link>
+          </p>
+          <p>
+            E-Mail:{" "}
+            <Link
+              href="mailto:info@mnbausolar.de"
+              className="hover:text-orange-600"
+            >
+              info@mnbausolar.de
+            </Link>
+          </p>
           <p>
             Internetadresse:{" "}
             <a
@@ -134,14 +152,21 @@ function Impressum() {
         </div>
 
         <div className="mb-8">
-          <h3 className="text-xl font-semibold mb-2">Design und Entwicklung:</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            Design und Entwicklung:
+          </h3>
           <p>Florian Ludwig</p>
-          <p>E-Mail: <Link href="mailto:florian.ludwig-hro@gmx.de" className="hover:text-orange-600">
-          florian.ludwig-hro@gmx.de
-          </Link></p>
           <p>
-            Die Inhalte der Website liegen in der Verantwortung des Betreibers. Ich übernehme keine Haftung für deren Richtigkeit oder rechtliche Konformität.
+            E-Mail:{" "}
+            <Link
+              href="mailto:florian.ludwig-hro@gmx.de"
+              className="hover:text-orange-600"
+            >
+              florian.ludwig-hro@gmx.de
+            </Link>
           </p>
+          <p>Keine Haftung für Inhalt und Richtigkeit der Internetseite.</p>
+          <p>Die Inhalte liegen in der Verantwortung des Betreibers.</p>
         </div>
       </div>
     </div>
